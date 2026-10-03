@@ -12,7 +12,9 @@ Before first release:
 # after README.plugin.md -> README.md and placeholder replacement
 mise install
 mise run bootstrap
+# optional source diagnostic only; not a release gate
 pnpm run checksums:generate
+pnpm run checksums:check
 mise run doctor
 mise run validate
 mise run test
