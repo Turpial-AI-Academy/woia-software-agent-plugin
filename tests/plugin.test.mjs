@@ -276,6 +276,14 @@ test("portable release validation does not require a source checksum manifest", 
   await assert.doesNotReject(() => validatePortableArchive(fixture.root, "HEAD"));
 });
 
+test("doctor does not require the optional source checksum manifest", async () => {
+  const doctorSource = await readFile(path.join(ROOT, "scripts/doctor.mjs"), "utf8");
+  const packageJson = JSON.parse(await readFile(path.join(ROOT, "package.json"), "utf8"));
+  assert.doesNotMatch(doctorSource, /["']CHECKSUMS\.sha256["']/);
+  assert.equal(packageJson.scripts["checksums:generate"], "node scripts/generate-checksums.mjs");
+  assert.equal(packageJson.scripts["checksums:check"], "node scripts/check-checksums.mjs");
+});
+
 test("portable path safety and secret-like material are rejected", async (t) => {
   const pathFixture = await createFixture(t);
   const target = path.join(pathFixture.root, "skills/example/SKILL.md");
