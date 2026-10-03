@@ -1,0 +1,23 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "stack/v1",
+  "contract_version": "1.0.0",
+  "phase": 5,
+  "capability": "stack",
+  "inputs": [
+    "requirements",
+    "constraints"
+  ],
+  "outputs": [
+    "docs/project/05-STACK.md"
+  ],
+  "gate": [
+    "Cada tecnología esencial y versión/constraint relevante tiene una razón verificable y es compatible con el producto y entorno objetivo."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-stack",
+    "skill": "stack",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

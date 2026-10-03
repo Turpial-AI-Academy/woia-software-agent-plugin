@@ -1,0 +1,23 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "architecture/v1",
+  "contract_version": "1.0.0",
+  "phase": 6,
+  "capability": "architecture",
+  "inputs": [
+    "requirements",
+    "stack"
+  ],
+  "outputs": [
+    "docs/project/06-TECHNICAL-ARCHITECTURE.md"
+  ],
+  "gate": [
+    "Responsabilidades, límites, dependencia, datos e integraciones son claros para diseñar e implementar sin componentes especulativos."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-architecture",
+    "skill": "architecture",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

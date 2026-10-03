@@ -1,0 +1,23 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "discovery/v1",
+  "contract_version": "1.0.0",
+  "phase": 1,
+  "capability": "discovery",
+  "inputs": [
+    "user intent",
+    "existing repository context when present"
+  ],
+  "outputs": [
+    "docs/project/01-DISCOVERY.md"
+  ],
+  "gate": [
+    "Problema, usuarios, resultado y alcance inmediato son comprensibles sin asumir una solución técnica."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-discovery",
+    "skill": "discovery",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

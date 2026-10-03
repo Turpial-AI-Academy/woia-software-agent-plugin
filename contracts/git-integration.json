@@ -1,0 +1,24 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "git-integration/v1",
+  "contract_version": "1.0.0",
+  "phase": 17,
+  "capability": "git-integration",
+  "inputs": [
+    "review/testing evidence",
+    "source head",
+    "integration policy"
+  ],
+  "outputs": [
+    "integration evidence and reconciled state"
+  ],
+  "gate": [
+    "El head revisado/probado está verificablemente integrado, la higiene atribuible está clean y la política Git efectiva fue respetada."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-git-integration",
+    "skill": "git-integration",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

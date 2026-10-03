@@ -1,0 +1,22 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "observability/v1",
+  "contract_version": "1.0.0",
+  "phase": 21,
+  "capability": "observability",
+  "inputs": [
+    "release-ready candidate"
+  ],
+  "outputs": [
+    "operational signal plan/evidence"
+  ],
+  "gate": [
+    "Los fallos operativos relevantes pueden detectarse y diagnosticarse con señales suficientes, o la fase está justificadamente fuera de alcance."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-observability",
+    "skill": "observability",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

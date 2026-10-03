@@ -1,0 +1,31 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "repository-hygiene/v1",
+  "contract_version": "1.0.0",
+  "transition_gate": "release-hygiene",
+  "capability": "repository-hygiene",
+  "inputs": [
+    "integrated repository state after the applicable delivery work",
+    "release intent and published-version history",
+    "repository instructions, architecture, runtime entrypoints, documentation, and existing validation tooling"
+  ],
+  "outputs": [
+    "repository hygiene evidence",
+    "cleanup convergence result",
+    "classified remaining findings with rationale"
+  ],
+  "gate": [
+    "La limpieza general cubre código muerto/huérfano, legacy/cruft, documentación y configuración obsoleta, duplicación y artefactos abandonados usando evidencia del repositorio.",
+    "Los proyectos sin versión publicada pueden eliminar compatibilidad/legacy nunca publicado cuando la evidencia indique que no es necesario; proyectos publicados o production preservan compatibilidad, migraciones, rollback, historia y contratos públicos salvo justificación explícita.",
+    "Cada hallazgo queda clasificado como SAFE_DELETE, REVIEW_REQUIRED o PROTECTED; no se elimina material dinámico, externo o históricamente necesario solo por parecer no usado.",
+    "Si una mutación de limpieza afecta evidencia previa de review/testing/integration, esa evidencia se reconcilia proporcionalmente antes de intentar convergencia.",
+    "La limpieza converge en no más de tres ciclos de mutación y luego obtiene dos verificaciones frescas consecutivas, sobre el mismo HEAD, sin nuevos hallazgos accionables.",
+    "Las validaciones relevantes del repositorio pasan sobre el HEAD final de higiene; si no converge, el resultado es HYGIENE_NOT_CONVERGED y no se congela el release candidate."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-repository-hygiene",
+    "skill": "repository-hygiene",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

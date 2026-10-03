@@ -1,0 +1,24 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "development-conventions/v1",
+  "contract_version": "1.0.0",
+  "phase": 8,
+  "capability": "development-conventions",
+  "inputs": [
+    "architecture",
+    "technical design",
+    "team/repository constraints"
+  ],
+  "outputs": [
+    "docs/project/08-DEVELOPMENT-CONVENTIONS.md"
+  ],
+  "gate": [
+    "Otro agente puede trabajar y validar sin adivinar comandos, boundaries, política Git o criterios de calidad."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-development-conventions",
+    "skill": "development-conventions",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

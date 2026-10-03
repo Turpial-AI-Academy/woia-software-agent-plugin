@@ -1,0 +1,24 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "testing/v1",
+  "contract_version": "1.0.0",
+  "phase": 16,
+  "capability": "testing",
+  "inputs": [
+    "reviewed source head",
+    "SPEC",
+    "risk"
+  ],
+  "outputs": [
+    "testing evidence"
+  ],
+  "gate": [
+    "Review y testing aprueban el mismo source head final y los criterios de aceptación tienen evidencia proporcional al riesgo."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-testing",
+    "skill": "testing",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

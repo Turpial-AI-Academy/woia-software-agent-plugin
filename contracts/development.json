@@ -1,0 +1,23 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "development/v1",
+  "contract_version": "1.0.0",
+  "phase": 14,
+  "capability": "development",
+  "inputs": [
+    "ready SPEC",
+    "tasks"
+  ],
+  "outputs": [
+    "code/config/docs for the SPEC"
+  ],
+  "gate": [
+    "Tasks cerradas o skipped con razón, implementación satisface la SPEC y existe un source head identificable para review."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-development",
+    "skill": "development",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

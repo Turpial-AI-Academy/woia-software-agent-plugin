@@ -1,0 +1,22 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "technical-design/v1",
+  "contract_version": "1.0.0",
+  "phase": 7,
+  "capability": "technical-design",
+  "inputs": [
+    "architecture"
+  ],
+  "outputs": [
+    "docs/project/07-TECHNICAL-DESIGN.md"
+  ],
+  "gate": [
+    "Los contratos transversales permiten materializar el sistema y preservar boundaries sin duplicar detalle específico de SPECS."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-technical-design",
+    "skill": "technical-design",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

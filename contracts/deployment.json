@@ -1,0 +1,23 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "deployment/v1",
+  "contract_version": "1.0.0",
+  "phase": 23,
+  "capability": "deployment",
+  "inputs": [
+    "candidate approved through phases 18-22",
+    "human production authorization when required"
+  ],
+  "outputs": [
+    "promoted/deployed candidate evidence"
+  ],
+  "gate": [
+    "El candidato aprobado fue promovido/desplegado por el mecanismo real, pasó las comprobaciones posteriores y conserva una recuperación conocida."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-deployment",
+    "skill": "deployment",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

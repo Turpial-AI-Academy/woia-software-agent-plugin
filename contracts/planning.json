@@ -1,0 +1,24 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "planning/v1",
+  "contract_version": "1.0.0",
+  "phase": 9,
+  "capability": "planning",
+  "inputs": [
+    "requirements",
+    "architecture",
+    "priorities"
+  ],
+  "outputs": [
+    "docs/project/09-PLAN.md"
+  ],
+  "gate": [
+    "La próxima secuencia de entregas y dependencias es clara y compatible con las prioridades actuales."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-planning",
+    "skill": "planning",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

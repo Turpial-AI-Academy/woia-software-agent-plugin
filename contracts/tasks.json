@@ -1,0 +1,22 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "tasks/v1",
+  "contract_version": "1.0.0",
+  "phase": 13,
+  "capability": "tasks",
+  "inputs": [
+    "draft SPEC"
+  ],
+  "outputs": [
+    "docs/specs/<SPEC-ID>-<slug>/tasks/"
+  ],
+  "gate": [
+    "SPEC y tasks cumplen definición de ready y tienen un orden/dependencias ejecutables."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-tasks",
+    "skill": "tasks",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

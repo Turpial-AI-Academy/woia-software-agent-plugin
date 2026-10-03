@@ -1,0 +1,22 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "security/v1",
+  "contract_version": "1.0.0",
+  "phase": 19,
+  "capability": "security",
+  "inputs": [
+    "QA-approved candidate"
+  ],
+  "outputs": [
+    "security evidence"
+  ],
+  "gate": [
+    "No existen riesgos de seguridad bloqueantes sin resolución o aceptación explícita válida para ese candidato."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-security",
+    "skill": "security",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

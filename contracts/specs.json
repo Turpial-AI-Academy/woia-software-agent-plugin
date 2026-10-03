@@ -1,0 +1,23 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "specs/v1",
+  "contract_version": "1.0.0",
+  "phase": 12,
+  "capability": "specs",
+  "inputs": [
+    "stable project context",
+    "next deliverable behavior"
+  ],
+  "outputs": [
+    "docs/specs/<SPEC-ID>-<slug>/<SPEC-ID>.md"
+  ],
+  "gate": [
+    "El comportamiento de la SPEC está definido y es verificable; puede descomponerse sin ambigüedades materiales."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-specs",
+    "skill": "specs",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

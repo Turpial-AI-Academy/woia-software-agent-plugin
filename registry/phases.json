@@ -1,0 +1,353 @@
+{
+  "principle": "minimum-sufficient-evidence",
+  "meta_capabilities": [
+    "methodology-design",
+    "methodology-orchestration"
+  ],
+  "operating_moments": [
+    {
+      "name": "Design methodology",
+      "phases": "meta",
+      "purpose": "Select the minimum useful methodology and capability plan."
+    },
+    {
+      "name": "Found",
+      "phases": "1-11",
+      "purpose": "Establish enough stable project context and repository operating contract for the next delivery."
+    },
+    {
+      "name": "Deliver a SPEC",
+      "phases": "12-17",
+      "purpose": "Define, implement, review, test, integrate, and close one behavioral change."
+    },
+    {
+      "name": "Validate release",
+      "phases": "18-22",
+      "purpose": "Validate one immutable release candidate."
+    },
+    {
+      "name": "Promote",
+      "phases": "23",
+      "purpose": "Promote/deploy the approved candidate with authorization, smoke, and rollback."
+    }
+  ],
+  "phases": [
+    {
+      "number": 1,
+      "key": "phase-01-discovery",
+      "title": "Discovery",
+      "capability": "discovery",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "discovery/v1"
+    },
+    {
+      "number": 2,
+      "key": "phase-02-business-rules",
+      "title": "Business Rules",
+      "capability": "business-rules",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "business-rules/v1"
+    },
+    {
+      "number": 3,
+      "key": "phase-03-requirements",
+      "title": "Requirements & User Stories",
+      "capability": "requirements",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "requirements/v1"
+    },
+    {
+      "number": 4,
+      "key": "phase-04-ux-ui",
+      "title": "UX/UI & Interaction Design",
+      "capability": "ux-ui",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "ux-ui/v1"
+    },
+    {
+      "number": 5,
+      "key": "phase-05-stack",
+      "title": "Stack",
+      "capability": "stack",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "stack/v1"
+    },
+    {
+      "number": 6,
+      "key": "phase-06-architecture",
+      "title": "Technical Architecture",
+      "capability": "architecture",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "architecture/v1"
+    },
+    {
+      "number": 7,
+      "key": "phase-07-technical-design",
+      "title": "Technical Design",
+      "capability": "technical-design",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "technical-design/v1"
+    },
+    {
+      "number": 8,
+      "key": "phase-08-development-conventions",
+      "title": "Development Conventions",
+      "capability": "development-conventions",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "development-conventions/v1"
+    },
+    {
+      "number": 9,
+      "key": "phase-09-planning",
+      "title": "Planning",
+      "capability": "planning",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "planning/v1"
+    },
+    {
+      "number": 10,
+      "key": "phase-10-repository-environment",
+      "title": "Repository Environment, Toolchain, Scaffolding & Environments",
+      "capability": "repository-environment",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "repository-environment/v1"
+    },
+    {
+      "number": 11,
+      "key": "phase-11-cicd",
+      "title": "CI/CD & Quality Gates",
+      "capability": "cicd",
+      "moment": "found",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "cicd/v1"
+    },
+    {
+      "number": 12,
+      "key": "phase-12-specs",
+      "title": "SPEC",
+      "capability": "specs",
+      "moment": "deliver-spec",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "specs/v1"
+    },
+    {
+      "number": 13,
+      "key": "phase-13-tasks",
+      "title": "Tasks",
+      "capability": "tasks",
+      "moment": "deliver-spec",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "tasks/v1"
+    },
+    {
+      "number": 14,
+      "key": "phase-14-development",
+      "title": "Development",
+      "capability": "development",
+      "moment": "deliver-spec",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "development/v1"
+    },
+    {
+      "number": 15,
+      "key": "phase-15-code-review",
+      "title": "Code Review",
+      "capability": "code-review",
+      "moment": "deliver-spec",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "code-review/v1"
+    },
+    {
+      "number": 16,
+      "key": "phase-16-testing",
+      "title": "Testing",
+      "capability": "testing",
+      "moment": "deliver-spec",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "testing/v1"
+    },
+    {
+      "number": 17,
+      "key": "phase-17-git-integration",
+      "title": "Git Finalization & Integration",
+      "capability": "git-integration",
+      "moment": "deliver-spec",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "git-integration/v1"
+    },
+    {
+      "number": 18,
+      "key": "phase-18-release-qa",
+      "title": "Release Candidate QA",
+      "capability": "release-qa",
+      "moment": "validate-release",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "release-qa/v1"
+    },
+    {
+      "number": 19,
+      "key": "phase-19-security",
+      "title": "Security",
+      "capability": "security",
+      "moment": "validate-release",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "security/v1"
+    },
+    {
+      "number": 20,
+      "key": "phase-20-release-preparation",
+      "title": "Release Preparation",
+      "capability": "release-preparation",
+      "moment": "validate-release",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "release-preparation/v1"
+    },
+    {
+      "number": 21,
+      "key": "phase-21-observability",
+      "title": "Observability",
+      "capability": "observability",
+      "moment": "validate-release",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "observability/v1"
+    },
+    {
+      "number": 22,
+      "key": "phase-22-documentation",
+      "title": "Documentation",
+      "capability": "documentation",
+      "moment": "validate-release",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "documentation/v1"
+    },
+    {
+      "number": 23,
+      "key": "phase-23-deployment",
+      "title": "Promotion & Deployment",
+      "capability": "deployment",
+      "moment": "promote",
+      "status_values": [
+        "required",
+        "conditional",
+        "not_applicable"
+      ],
+      "contract": "deployment/v1"
+    }
+  ],
+  "transition_gates": [
+    {
+      "key": "release-hygiene",
+      "title": "Release Hygiene Gate",
+      "capability": "repository-hygiene",
+      "contract": "repository-hygiene/v1",
+      "after_phase": 17,
+      "before_phase": 18,
+      "activation": "before-release-candidate-freeze",
+      "required": true,
+      "policy": {
+        "max_mutation_cycles": 3,
+        "consecutive_clean_verifications": 2,
+        "fresh_context_required": true
+      }
+    }
+  ],
+  "woia_software_version": "0.5.0"
+}

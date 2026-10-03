@@ -1,0 +1,22 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "release-preparation/v1",
+  "contract_version": "1.0.0",
+  "phase": 20,
+  "capability": "release-preparation",
+  "inputs": [
+    "security-approved candidate"
+  ],
+  "outputs": [
+    "version/recovery/promotion plan"
+  ],
+  "gate": [
+    "Versión, artefacto, cambios, recuperación y mecanismo de promoción son reproducibles para el mismo candidato."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-release-preparation",
+    "skill": "release-preparation",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "documentation/v1",
+  "contract_version": "1.0.0",
+  "phase": 22,
+  "capability": "documentation",
+  "inputs": [
+    "same candidate",
+    "product/operations docs"
+  ],
+  "outputs": [
+    "reconciled user/operations documentation"
+  ],
+  "gate": [
+    "La documentación material para usuarios, agentes y operadores coincide con el mismo candidato sin divergencias bloqueantes."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-documentation",
+    "skill": "documentation",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

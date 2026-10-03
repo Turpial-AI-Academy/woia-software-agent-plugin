@@ -1,0 +1,24 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "cicd/v1",
+  "contract_version": "1.0.0",
+  "phase": 11,
+  "capability": "cicd",
+  "inputs": [
+    "stack",
+    "development conventions",
+    "repository environment"
+  ],
+  "outputs": [
+    "docs/project/11-CICD.md"
+  ],
+  "gate": [
+    "The repository has proportional, reproducible validation interfaces with local-first defaults and a release check; remote CI is optional unless the project explicitly requires it."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-cicd",
+    "skill": "cicd",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "release-qa/v1",
+  "contract_version": "1.0.0",
+  "phase": 18,
+  "capability": "release-qa",
+  "inputs": [
+    "integrated scope",
+    "frozen candidate"
+  ],
+  "outputs": [
+    "release-candidate QA evidence"
+  ],
+  "gate": [
+    "El mismo candidato inmutable satisface el alcance integrado de release y está listo para evaluación de seguridad."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-release-qa",
+    "skill": "release-qa",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

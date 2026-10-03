@@ -1,0 +1,23 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "requirements/v1",
+  "contract_version": "1.0.0",
+  "phase": 3,
+  "capability": "requirements",
+  "inputs": [
+    "discovery",
+    "business rules when applicable"
+  ],
+  "outputs": [
+    "docs/project/03-REQUIREMENTS.md"
+  ],
+  "gate": [
+    "Requirements are implementable and verifiable; user stories exist only where they improve traceability or communication."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-requirements",
+    "skill": "requirements",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

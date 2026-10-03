@@ -1,0 +1,25 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "repository-environment/v1",
+  "contract_version": "1.0.0",
+  "phase": 10,
+  "capability": "repository-environment",
+  "inputs": [
+    "stack",
+    "architecture",
+    "development conventions",
+    "existing repository environment"
+  ],
+  "outputs": [
+    "docs/project/10-REPOSITORY-ENVIRONMENT.md"
+  ],
+  "gate": [
+    "A clean environment can be prepared and diagnosed from repository-owned contracts without relying on accidental host state; existing healthy standards are preserved."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-repository-environment",
+    "skill": "repository-environment",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

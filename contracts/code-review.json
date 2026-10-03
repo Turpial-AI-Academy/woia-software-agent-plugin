@@ -1,0 +1,24 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "code-review/v1",
+  "contract_version": "1.0.0",
+  "phase": 15,
+  "capability": "code-review",
+  "inputs": [
+    "source head",
+    "SPEC",
+    "architecture"
+  ],
+  "outputs": [
+    "review evidence"
+  ],
+  "gate": [
+    "No quedan hallazgos bloqueantes aplicables y el source head puede pasar a testing."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-code-review",
+    "skill": "code-review",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

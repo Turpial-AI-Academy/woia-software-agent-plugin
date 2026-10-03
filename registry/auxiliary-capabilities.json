@@ -1,0 +1,162 @@
+{
+  "schema_version": "0.5.0",
+  "policy": {
+    "selection": "triggered-recommendation",
+    "eligibility_alone_triggers_recommendation": false,
+    "provider_replacement": false,
+    "default_blocking": false,
+    "installation": "user-controlled",
+    "missing_behavior": "continue-primary-unless-required-for-evidence"
+  },
+  "capabilities": [
+    {
+      "name": "delivery-sandbox",
+      "kind": "auxiliary",
+      "plugin": {
+        "name": "woia-software-delivery-sandbox",
+        "skill": "delivery-sandbox",
+        "marketplace": "woia-marketplace-software",
+        "availability": "available"
+      },
+      "purpose": "Provide an isolated disposable local or self-hosted environment for exact-candidate validation with required services without touching production or requiring hosted CI.",
+      "responsibilities": {
+        "primary_relevance": [
+          "repository-environment",
+          "cicd",
+          "testing",
+          "release-qa",
+          "deployment"
+        ],
+        "conditional_relevance": [
+          "development",
+          "release-preparation",
+          "security"
+        ]
+      },
+      "triggers": [
+        {
+          "key": "isolated-runtime",
+          "description": "The responsibility needs an isolated runnable environment rather than static/repository-only checks."
+        },
+        {
+          "key": "stateful-services",
+          "description": "Validation needs a database, auth, storage, queues, workers, cache, or other stateful/dependent services."
+        },
+        {
+          "key": "local-database",
+          "description": "A disposable database or local Supabase-like stack is useful to validate schema, migrations, seed data, or integration behavior."
+        },
+        {
+          "key": "pipeline-preflight",
+          "description": "Local replay/preflight of delivery automation would provide useful evidence before or instead of spending a hosted CI run."
+        },
+        {
+          "key": "preview-environment",
+          "description": "The responsibility needs an isolated preview/staging-style environment before production."
+        },
+        {
+          "key": "candidate-validation",
+          "description": "An exact release/deployment candidate must be started, exercised, smoke-tested, or verified with dependent services."
+        }
+      ],
+      "negative_rule": "Do not recommend when repository-owned checks already provide sufficient evidence without an isolated runtime or dependent services."
+    },
+    {
+      "name": "windows-app-trust",
+      "kind": "auxiliary",
+      "plugin": {
+        "name": "woia-software-windows-app-trust",
+        "skill": "windows-app-trust",
+        "marketplace": "woia-marketplace-software",
+        "availability": "available"
+      },
+      "purpose": "Audit, sign, validate, and safely configure Windows application trust for repository-built artifacts without weakening host security controls.",
+      "responsibilities": {
+        "primary_relevance": [
+          "security",
+          "release-preparation",
+          "release-qa",
+          "deployment"
+        ],
+        "conditional_relevance": [
+          "development",
+          "repository-environment",
+          "cicd"
+        ]
+      },
+      "triggers": [
+        {
+          "key": "windows-artifact",
+          "description": "The responsibility produces or consumes a Windows EXE, DLL, MSI, MSIX, or PowerShell artifact whose trust/signature state matters."
+        },
+        {
+          "key": "authenticode-signing",
+          "description": "A Windows artifact needs Authenticode signing as part of local use, release preparation, or distribution."
+        },
+        {
+          "key": "signature-verification",
+          "description": "Release/security evidence must verify the signer, signature status, trusted chain, or publisher identity of a Windows artifact."
+        },
+        {
+          "key": "smart-app-control-block",
+          "description": "Smart App Control blocks a repository-built Windows artifact and the trust model must be diagnosed without disabling security controls."
+        },
+        {
+          "key": "local-publisher-trust",
+          "description": "A controlled developer/workstation environment needs explicit reversible local trust for a project signer."
+        },
+        {
+          "key": "app-control-policy",
+          "description": "An existing App Control for Business environment needs a narrowly scoped project signer policy or verification workflow."
+        },
+        {
+          "key": "public-windows-distribution",
+          "description": "A Windows release targets arbitrary external users and requires a deliberate publicly trusted signing path."
+        }
+      ],
+      "negative_rule": "Do not recommend merely because the host or project supports Windows. Require a concrete artifact-signing, signature-verification, trust-block, local-publisher-trust, App Control, or public Windows distribution need."
+    },
+    {
+      "name": "comfyui-local",
+      "kind": "auxiliary",
+      "plugin": {
+        "name": "woia-comfyui-local",
+        "skill": "comfyui-local",
+        "marketplace": "woia-marketplace-software",
+        "availability": "available"
+      },
+      "purpose": "Create, edit, and validate requested creative assets through an existing local ComfyUI runtime, and deliver editable workflows and generated files independently of ASPS.",
+      "responsibilities": {
+        "primary_relevance": [
+          "ux-ui",
+          "development",
+          "documentation"
+        ],
+        "conditional_relevance": [
+          "discovery",
+          "testing",
+          "release-qa"
+        ]
+      },
+      "triggers": [
+        {
+          "key": "requested-creative-asset",
+          "description": "The responsibility explicitly needs a generated image, video, or other creative asset supported by the local runtime."
+        },
+        {
+          "key": "requested-asset-edit",
+          "description": "The task explicitly needs an existing creative asset edited or transformed through a local ComfyUI workflow."
+        },
+        {
+          "key": "editable-workflow-handoff",
+          "description": "The task requests an editable ComfyUI workflow with its inputs and results so the user can inspect or continue it in Desktop."
+        },
+        {
+          "key": "required-media-fixture",
+          "description": "A real media fixture generated through the target workflow is needed for a specific acceptance check; existing healthy fixtures or synthetic data do not cover that check."
+        }
+      ],
+      "negative_rule": "Do not recommend merely because ComfyUI, a GPU, Windows, local models, or the plugin are present or installed. Require a concrete requested asset, asset edit, editable workflow, or necessary media-fixture need. Do not recommend when an existing asset or repository-native diagram already satisfies the task."
+    }
+  ]
+}

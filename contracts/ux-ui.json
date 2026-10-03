@@ -1,0 +1,22 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "ux-ui/v1",
+  "contract_version": "1.0.0",
+  "phase": 4,
+  "capability": "ux-ui",
+  "inputs": [
+    "requirements"
+  ],
+  "outputs": [
+    "docs/project/04-UX-UI.md"
+  ],
+  "gate": [
+    "Los flujos y estados necesarios permiten derivar y verificar la interacción esperada, o la fase está justificadamente fuera de alcance."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-ux-ui",
+    "skill": "ux-ui",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

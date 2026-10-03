@@ -1,0 +1,22 @@
+{
+  "$schema": "./capability-contract.schema.json",
+  "id": "business-rules/v1",
+  "contract_version": "1.0.0",
+  "phase": 2,
+  "capability": "business-rules",
+  "inputs": [
+    "discovery"
+  ],
+  "outputs": [
+    "docs/project/02-BUSINESS-RULES.md"
+  ],
+  "gate": [
+    "Las reglas que afectan la próxima entrega son explícitas, con excepciones relevantes y sin duplicación innecesaria."
+  ],
+  "provider_plugin": {
+    "name": "woia-software-business-rules",
+    "skill": "business-rules",
+    "marketplace": "woia-marketplace-software",
+    "availability": "available"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://woia.dev/schemas/software/v0.5.0/capability-contract.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "id",
+    "contract_version",
+    "capability",
+    "inputs",
+    "outputs",
+    "gate",
+    "provider_plugin"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "./capability-contract.schema.json"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9-]+/v[0-9]+$"
+    },
+    "contract_version": {
+      "type": "string",
+      "minLength": 5,
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "phase": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 23
+    },
+    "capability": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "gate": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "provider_plugin": {
+      "type": "object",
+      "required": [
+        "name",
+        "skill",
+        "marketplace",
+        "availability"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "marketplace": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "availability": {
+          "enum": [
+            "available",
+            "planned",
+            "deprecated"
+          ]
+        },
+        "skill": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "transition_gate": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    }
+  },
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "required": [
+        "phase"
+      ],
+      "properties": {
+        "phase": true,
+        "transition_gate": false
+      }
+    },
+    {
+      "required": [
+        "transition_gate"
+      ],
+      "properties": {
+        "phase": false,
+        "transition_gate": true
+      }
+    }
+  ]
+}
