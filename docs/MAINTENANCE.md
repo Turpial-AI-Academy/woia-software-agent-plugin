@@ -31,7 +31,7 @@ mise run ci:extended
 mise run jobs:local
 ~~~
 
-Docker parity uses a read-only source mount, a fresh Linux workspace, an exact pnpm install and frozen dependencies.
+Clean-Linux parity uses a local OCI container engine with Docker-compatible CLI semantics, a read-only source mount, a fresh Linux workspace, an exact pnpm install and frozen dependencies. `docker` is the compatibility default; set `WOIA_CONTAINER_ENGINE=podman` (or another compatible local CLI) when appropriate.
 
 ## Portable payload changes
 

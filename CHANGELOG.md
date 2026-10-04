@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Remove unconsumed private authoring exports without changing Software methodology or provider contracts.
+- Reconcile maintenance documentation with container-engine-neutral clean-Linux parity.
+
 ## 0.5.0 - 2026-10-03
 
 - Refactor ASPS 2.6.0 Software methodology into WOIA Software.
