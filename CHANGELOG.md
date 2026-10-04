@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+**Unreleased main maintenance**
 
 - Remove unconsumed private authoring exports without changing Software methodology or provider contracts.
 - Reconcile maintenance documentation with container-engine-neutral clean-Linux parity.
