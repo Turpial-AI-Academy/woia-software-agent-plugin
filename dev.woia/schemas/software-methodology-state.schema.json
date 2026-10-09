@@ -165,42 +165,6 @@
         }
       }
     },
-    "migration": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "source",
-        "status"
-      ],
-      "properties": {
-        "source": {
-          "enum": [
-            "new",
-            "asps-2.x"
-          ]
-        },
-        "status": {
-          "enum": [
-            "not_required",
-            "pending",
-            "migrated",
-            "blocked"
-          ]
-        },
-        "source_version": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "source_path": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"

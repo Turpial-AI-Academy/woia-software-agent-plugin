@@ -1,6 +1,6 @@
 # WOIA Software
 
-WOIA Software is the Software department orchestrator for WOIA v0.5.0, refactored from ASPS 2.6.0.
+WOIA Software is the Software department orchestrator for WOIA v0.5.6, refactored from ASPS 2.6.0.
 
 ## Architecture
 
@@ -23,3 +23,7 @@ A user should be able to install the WOIA Software marketplace/orchestrator and 
 ## Migration
 
 Existing ASPS Projects are migrated preserve-first. Legacy .asps state remains immutable evidence; the new state lives under .woia.
+
+## Maintenance
+
+Edit only this canonical repository. Keep `plugin.json`, `package.json` and `dev.woia/manifest.json` versions aligned. From the canonical WOIA Ecosystem repository, run `mise run plugin:certify-thin --repo <absolute-plugin-repository>`, then use its release preparation/publication tasks. Install and update consumers from immutable published artifacts; keep Project personalization in overlays.
