@@ -1,6 +1,6 @@
 # WOIA Software
 
-WOIA Software is the Software department orchestrator for WOIA v0.5.6, refactored from ASPS 2.6.0.
+WOIA Software is the Software department orchestrator for WOIA v0.5.7, refactored from ASPS 2.6.0.
 
 ## Architecture
 

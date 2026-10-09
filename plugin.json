@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "woia-software",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "WOIA Software department orchestrator: adaptive software-delivery methodology with 23 phases, Release Hygiene, provider contracts, preserve-first adoption, and WOIA Core runtime orchestration.",
   "author": {
     "name": "Turpial AI Academy",
